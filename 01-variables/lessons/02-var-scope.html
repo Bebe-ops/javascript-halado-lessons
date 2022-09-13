@@ -10,20 +10,20 @@
 
     <body>
         <script>
-            var globalScope = 'global';
+            var globalScope = 'global';         //globális változó, bárhol elérhető
 
-            function sampleFunction() {
+            function sampleFunction() {         //függvényből is elérem
                 console.log(globalScope);
             }
 
-            function sampleFunction2() {
+            function sampleFunction2() {        //a függvényben létrehozott lokális csak a függvényből érhető el
                 var localScope = 'local';
                 console.log(localScope);
             }
 
             sampleFunction();
             sampleFunction2();
-            console.log(localScope);
+            console.log(localScope);  
         </script>
     </body>
 

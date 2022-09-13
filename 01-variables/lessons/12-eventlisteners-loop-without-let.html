@@ -16,14 +16,15 @@
         <script>
             'use strict';
 
-            function clickHandler(i) {
-                elements[i].addEventListener('click', function () {
+            // az előző (11.) for loop-on belüli eseményfigyelős tartalmat egy függvénybe rakom, és átadom paraméterül az i-t.
+            function clickHandler(i) {                  
+                elements[i].addEventListener('click', function () {      
                     console.log('item: ' + i);
                 })
             }
 
             var elements = document.querySelectorAll('.click-me');
-            for (var i = 0; i < elements.length; i += 1) {
+            for (var i = 0; i < elements.length; i += 1) {          // a loopban meghívom a függvényt
                 clickHandler(i);
             }
 

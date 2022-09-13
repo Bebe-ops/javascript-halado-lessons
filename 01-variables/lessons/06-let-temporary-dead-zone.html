@@ -11,14 +11,15 @@
     <body>
         <script>
             'use strict';
-
+            // console.log(sampleVaribale);     // inicializálás előtt nem férek hozzá
             let sampleVaribale = 'sample';
             console.log(sampleVaribale);
+           
 
-            var sampleVaribale2 = 'sample2';
+            var sampleVaribale2 = 'sample2';      //minden var kulcsszóval deklarált változó a globális window object-hez hozzá van kötve és elérhető rajta keresztül
             console.log(window.sampleVaribale2);
 
-            console.log(window.sampleVaribale);
+            console.log(window.sampleVaribale);  //azonban a let-tel deklarált változót nem érem el a window object-en keresztül
         </script>
     </body>
 

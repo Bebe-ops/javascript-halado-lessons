@@ -16,13 +16,14 @@
         <script>
             'use strict';
 
-            var elements = document.querySelectorAll('.click-me');
-            for (var i = 0; i < elements.length; i += 1) {
-                elements[i].addEventListener('click', function () {
+            var elements = document.querySelectorAll('.click-me');   // kigyűjtöm a click me class-ű elemeket egy változóba
+            for (var i = 0; i < elements.length; i += 1) {          //végigmegyek az elemeken
+                elements[i].addEventListener('click', function () {    // az i-edik elemhez hozzáadok egy eseményfigyelőt  (1.paraméter:click, 2.:egy kiírató függvény)
                     console.log('item: ' + i);
                 })
             }
-
+//1.gombnál 0, 2-nál1, 3-nál2-őt kellene kiírnia. nem működik var-ral, mert mire az eseményfigyelő lefut, addigra az i értéke 3 (bármelyik gombra kattintok.), tehát a i < elements.length feltétel:False
+// megoldás 12, 13 fájl     
         </script>
     </body>
 
